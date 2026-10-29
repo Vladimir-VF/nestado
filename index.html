@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Нестадо</title>
+<link rel="stylesheet" href="./game.css">
+</head>
+<body>
+<canvas id="scene" aria-label="Нестадо. Гра з корівами Неллі"></canvas>
+<div id="hud" aria-live="polite"></div>
+
+<header id="topbar">
+  <span class="brand">Нестадо</span>
+  <button id="sound" class="round" aria-label="Звук">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="wave" d="M16 8.5c1.2 1 1.8 2.2 1.8 3.5s-.6 2.5-1.8 3.5M18.5 6c2 1.6 3 3.6 3 6s-1 4.4-3 6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path class="mute" d="M16.5 9l5 6M21.5 9l-5 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+</header>
+
+<section id="intro">
+  <div class="intro-card">
+    <div class="eyebrow">коріви Неллі</div>
+    <h1>Нестадо</h1>
+    <p>Три коріви впали за холодильник.<br>Поверни їх назад.</p>
+    <button id="enter" class="primary" disabled>Грати</button>
+    <div id="loading"><div class="bar"><span id="loadBar"></span></div><small id="loadText">Завантажуємо корів</small></div>
+    <small class="hint">Зі звуком цікавіше</small>
+  </div>
+</section>
+
+<div id="kitchenTitle">Кухня. Холодильник. Три коріви-магніти.</div>
+<div id="tapHint">торкнись джмеля</div>
+<div id="behind">за холодильником</div>
+
+<div id="hudWrap">
+  <div id="portraits" aria-label="Перемкнути коріву"></div>
+  <div id="counter" aria-label="Знайдені магнітики"><span class="mg"></span><b id="count">0/9</b></div>
+  <div id="joy" aria-label="Рух"><div id="joyKnob"></div><em id="tut-move">рух</em></div>
+  <div id="actions">
+    <button id="btnAct" class="act"><span>Дія</span></button>
+    <button id="btnJump" class="jump" aria-label="Стрибок">↑<em id="tut-jump">стрибок</em></button>
+  </div>
+  <div id="keysHelp">WASD або стрілки · пробіл стрибок · E здібність · 1 2 3 коріви · тягни мишею, щоб озирнутись</div>
+</div>
+<div id="hint" role="status"></div>
+<div id="fade"></div>
+
+<section id="endView" aria-label="Кінець">
+  <div class="end-card">
+    <p class="big">Усі три знову на холодильнику.<br>Тільки тепер не в ряд.</p>
+    <p id="endCount"></p>
+    <button id="again" class="primary">Грати ще раз</button>
+  </div>
+</section>
+<script type="module" src="./game2.js"></script>
+
+</body>
+</html>
